@@ -4,41 +4,77 @@
     <meta charset="UTF-8">
     <title>Harish Subbiah R - Resume</title>
     <style>
+    /* Reset & Base */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f9;
+        color: #333;
         line-height: 1.6;
-        background-color: #f8f9fa;
-        animation: fadeIn 1.5s ease-in;
+        padding: 40px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        animation: fadeIn 1.5s ease;
+    }
+
+    h1, h2, h3 {
+        color: #2c3e50;
+        margin-bottom: 12px;
     }
 
     h1 {
-        color: #2E86C1;
-        animation: slideInFromLeft 1.2s ease-out;
+        font-size: 32px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
     }
 
     h2 {
-        color: #2E86C1;
-        margin-top: 40px;
-        animation: fadeInUp 1s ease-out;
+        font-size: 24px;
+        margin-top: 30px;
+        border-left: 5px solid #3498db;
+        padding-left: 10px;
     }
 
-    .section {
-        margin-bottom: 25px;
-        opacity: 0;
-        animation: fadeInUp 1s ease-in forwards;
-        animation-delay: 0.5s;
+    p {
+        margin: 8px 0;
+    }
+
+    ul {
+        margin: 10px 0 20px 20px;
     }
 
     a {
-        color: #117A65;
+        color: #3498db;
         text-decoration: none;
-        transition: color 0.3s, text-shadow 0.3s;
+        transition: 0.3s ease;
     }
 
     a:hover {
-        color: #0E6655;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        text-decoration: underline;
+        color: #1d6fa5;
+    }
+
+    .section {
+        margin-bottom: 30px;
+        animation: fadeInUp 1s ease;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 
     @keyframes fadeIn {
@@ -47,28 +83,26 @@
     }
 
     @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes slideInFromLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-100px);
+    @media (max-width: 768px) {
+        .info-grid {
+            grid-template-columns: 1fr;
         }
-        to {
-            opacity: 1;
-            transform: translateX(0);
+
+        body {
+            padding: 20px;
+        }
+
+        .container {
+            padding: 20px;
         }
     }
-   </style>
-</head>
+</style>
+
+   </head>
 <body>
 
     <h1>Harish Subbiah R</h1>
